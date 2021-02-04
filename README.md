@@ -13,4 +13,4 @@ I decided to use ml5.js for this particular application as I'm fairly comfortabl
 
 After training, I tested the model's accuracy in the browser just by feeding in one of the training images. On the face of it, it works great and seems accurate. I've used WebRTC's API @webRTC again to handle a video input and have drawn a mirrored version to the canvas. 
 
-My current challenge is to store snapshots of the video feed, perhaps in a hidden canvas, say once per second and call the python face detection script, feeding in those snapshots to obtain 76x76 cropped images of any faces. Upon receiving these, they would be stored in another hidden canvas and fed to the JavaScript model in the browser. I'm really not sure on how to do this or whether this is even the best approach, but I know it's obviously doable.
+The red square overlayed on the video feed indicates where one's face needs to be in order for the model to work. A cropped snapshot of the video at the appropriate dimensions is stored in a hidden canvas, which contains the same area as the red square. When the user clicks anywhere on the page, their facial expression is classified by the model :)
