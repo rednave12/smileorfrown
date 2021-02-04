@@ -1,12 +1,14 @@
-let img;
+//let img;
 let imageClassifier;
+let input = document.querySelector('#resizedFace');
+const resultsDiv = document.querySelector('.results');
 
 function preload() {
-	img = loadImage('/images/frown0.png');
+	//img = loadImage('/testimages/WIN_20210203_21_38_24_Pro.jpg');
 }
 
 function setup() {
-  createCanvas(76, 76);
+  //createCanvas(76, 76);
 
   const options = {
 	task: 'imageClassification',
@@ -25,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-	image(img, 0, 0);
+	//image(img, 0, 0);
 }
 
 function modelLoaded() {
@@ -33,7 +35,7 @@ function modelLoaded() {
 }
 
 function mousePressed() {
-	imageClassifier.classify({image: img}, gotResults);
+	imageClassifier.classify({image: input}, gotResults);
 }
 
 function gotResults(err, results) {
@@ -42,5 +44,16 @@ function gotResults(err, results) {
 		return;
 	}
 	console.log(results);
+	let label = results[0].label;
+	let confidence = (results[0].confidence * 100).toFixed(0);
+	resultsDiv.innerHTML = label + ": " +  confidence + "%";
+	
+	if (label == "smile") {
+		$("body").css({'backgroundColor': 'yellow'});
+		resultsDiv.innerHTML += "\r" + "amazing!!! you deserve to be happy!!!!"
+	} else if (label == "frown") {
+		$("body").css({'backgroundColor': 'blue'});
+		resultsDiv.innerHTML += "\r" + ":( hope you cheer up soon bab"
+	}
 }
 

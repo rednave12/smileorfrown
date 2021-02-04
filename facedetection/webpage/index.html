@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <title>ml5 Shape Classifier Training</title>
+	<link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <script src="https://unpkg.com/ml5@0.6.0/dist/ml5.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
   </head>
   <body>
-    <script src="happyorsad.js"></script>
+	<div class="instructions">Make sure your face is filling the red square - there should be no background inside :)</div>
+  
+	<div id="container">
+		<div class="overlay"></div>
+		<video playsinline autoplay></video>
+		<canvas id="videoCanvas"></canvas>
+	</div>
+	
+	<div class="results"></div>
+	
+	<div id="container">
+		<canvas id="resizedFace"></canvas>
+	</div>
+	
+    <script src="video.js"></script>
+	<script src="happyorsad.js"></script>
   </body>
 </html>

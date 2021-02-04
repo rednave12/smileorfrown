@@ -1,0 +1,60 @@
+#videoCanvas {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 0;
+	border-radius: 20px;
+}
+
+.overlay {
+	width: 76px;
+	height: 76px;
+	position: absolute;
+	background: transparent;
+	border: 2px solid red;
+	border-radius: 3px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+}
+
+.container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.results {
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%, -80%);
+	color: #fff;
+	font-family: 'Inconsolata', monospace;
+	font-size: 1rem;
+	background: #000;
+	border-radius: 4px;
+	padding: 4px;
+}
+
+.instructions {
+	position: absolute;
+	width: 20%;
+	left: 5%;
+	top: 10%;
+	transform: translate(-5%, -10%);
+	color: #fff;
+	font-family: 'Inconsolata', monospace;
+	font-size: 1rem;
+	background: #000;
+	border-radius: 4px;
+	padding: 4px;
+}
