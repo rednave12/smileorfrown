@@ -1,8 +1,6 @@
 # smileorfrown
 <em>A Facial Expression Image Classifier using ml5.js</em>
 
-This project is pretty ambitious for me in terms of bringing different technologies together and truly understanding how web apps work beyond just running JavaScript in the browser. 
-
 <strong><em>TRAINING THE MODEL</em></strong>
 
 I used Python with Selenium to webscrape photos of people both smiling and frowning from Shutterstock, saving them appropriately numbered and split by facial expression to a local directory. Then, using Python with OpenCV's face detection, I cropped and resized every image to be 76x76 squares containing faces only.
